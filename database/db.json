@@ -1,0 +1,106 @@
+{
+  "students": [
+    {
+      "username": "test",
+      "email": "test@test.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "username": "Mohamed",
+      "email": "mohamed@gmail.com",
+      "password": "123",
+      "subjects": [
+        {
+          "name": "Math",
+          "id": "1",
+          "degree": 1
+        },
+        {
+          "name": "English",
+          "id": "2",
+          "degree": 0
+        }
+      ],
+      "id": 2
+    },
+    {
+      "username": "Ali",
+      "email": "ali@gmail.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "username": "Ahmed",
+      "email": "ahmed@gmail.com",
+      "password": "123",
+      "subjects": [
+        {
+          "name": "Math",
+          "id": "1",
+          "degree": 2
+        },
+        {
+          "name": "English",
+          "id": "2",
+          "degree": 1
+        }
+      ],
+      "id": 4
+    }
+  ],
+  "doctor": [
+    {
+      "username": "malek",
+      "email": "malek@admin.com",
+      "password": "123456",
+      "id": 1
+    }
+  ],
+  "subjects": [
+    {
+      "name": "Math",
+      "questions": [
+        {
+          "question": "2*2",
+          "answer1": "4",
+          "answer2": "6",
+          "answer3": "8",
+          "answer4": "3",
+          "correctAnswer": "4"
+        },
+        {
+          "question": "5+20",
+          "answer1": "25",
+          "answer2": "35",
+          "answer3": "30",
+          "answer4": "40",
+          "correctAnswer": "25"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "English",
+      "questions": [
+        {
+          "question": "test",
+          "answer1": "tst",
+          "answer2": "false",
+          "answer3": "true",
+          "answer4": "null",
+          "correctAnswer": "true"
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "login": [
+    {
+      "username": "malek",
+      "role": "doctor",
+      "userId": 1,
+      "id": 1
+    }
+  ]
+}
