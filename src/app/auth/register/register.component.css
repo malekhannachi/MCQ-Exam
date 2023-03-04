@@ -1,0 +1,49 @@
+.register {
+  width: 60%;
+  margin: 100px auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+.registhead {
+  margin-top: -40px;
+  margin-bottom: 20px;
+}
+.registhead h2 {
+  display: inline-block;
+  padding: 5px 88px;
+  background-color: #3659f4;
+  border-radius: 30px;
+  font-size: 28px;
+  /* margin-top: 0px; */
+  color: #fff;
+}
+
+mat-form-field {
+  width: 100%;
+}
+mat-radio-button {
+  margin-right: 30px;
+}
+.registfoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.registfoot button {
+  margin-top: 15px;
+  padding: 0px 30px;
+  font-size: 18px;
+}
+
+a {
+  color: #f44336;
+  text-decoration: none;
+}
+
+.alert-danger {
+  background-color: #f44336c4;
+  color: #fff;
+  margin-top: 15px;
+  font-size: 18px;
+}

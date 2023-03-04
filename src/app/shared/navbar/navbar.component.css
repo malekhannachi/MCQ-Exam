@@ -1,0 +1,56 @@
+.navbar {
+  width: 100%;
+  background-color: #3659f4;
+  margin: 0;
+  border-radius: 0;
+  border: 0;
+  z-index: 999;
+}
+.welcome {
+  background-color: transparent !important;
+  position: fixed;
+}
+
+.nav a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px solid transparent;
+  padding: 10px;
+  margin: 5px 0;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #24baff;
+  border-bottom: 1px solid #24baff;
+}
+
+.active {
+  background-color: #0517bdbf;
+  box-shadow: 0px 5px 10px rgb(0 0 0 / 30%);
+}
+
+.active .mainNav {
+  margin-left: 20px;
+}
+.username {
+  background-color: #0231b1e6;
+  padding: 6px 13px;
+  color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  box-shadow: 0px 2px 10px rgb(0 0 0 / 40%);
+  margin-left: 20px;
+}
+
+.navbar-brand {
+  font-size: 32px !important;
+  color: #fff;
+  padding: 10px;
+}
+.navbar-brand img {
+  display: inline-block;
+  width: 40px;
+}
