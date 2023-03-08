@@ -8,13 +8,13 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="d-flex align-items-center">
         <ul class="nav navbar-right d-flex align-items-center">
-          <li  routerLinkActive="active"><a routerLink="/new-exam"> New Exam</a></li>
-          <li  routerLinkActive="active"><a routerLink="/students">Students</a></li>
-          <li routerLinkActive="active"><a routerLink="/subjects"> Subjects</a></li>
-          <li routerLinkActive="active" ><a routerLink="/login">Login</a></li>
-          <li  routerLinkActive="active"><a routerLink="/login">Logout</a></li>
-          <li  routerLinkActive="active"><a routerLink="/register">Register</a></li>
-          <li class="username">test</li>
+          <li  *ngIf="user?.role =='doctor' " routerLinkActive="active"><a routerLink="/new-exam"> New Exam</a></li>
+          <li *ngIf="user?.role =='doctor' " routerLinkActive="active"><a routerLink="/students">Students</a></li>
+          <li *ngIf="user!==null" routerLinkActive="active"><a routerLink="/subjects"> Subjects</a></li>
+          <li  *ngIf="user==null" routerLinkActive="active" ><a routerLink="/login">Login</a></li>
+          <li  *ngIf="user!==null" (click)="logOut()" routerLinkActive="active"><a routerLink="/login">Logout</a></li>
+          <li  *ngIf="user==null" routerLinkActive="active"><a routerLink="/register">Register</a></li>
+          <li *ngIf="user!==null" class="username">{{user?.username}}</li>
         </ul>
       
       </div><!-- /.navbar-collapse -->
