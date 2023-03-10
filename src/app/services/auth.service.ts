@@ -7,21 +7,21 @@ import { User } from '../models/user';
   providedIn: 'root',
 })
 export class AuthService {
-  authUrl = 'http://localhost:3000/';
+ baseUrl = 'http://localhost:3000/';
   user = new Subject();
   constructor(private http: HttpClient) {}
 
   createUser(user: User) {
-    return this.http.post<any>(this.authUrl + 'students', user);
+    return this.http.post<any>(this.baseUrl + 'students', user);
   }
   getAllUser(type: string) {
-    return this.http.get<any>(this.authUrl + type);
+    return this.http.get<any>(this.baseUrl + type);
   }
   loginUser(model: any) {
-    return this.http.put<any>(this.authUrl + 'login/1', model);
+    return this.http.put<any>(this.baseUrl + 'login/1', model);
   }
 
   getRole() {
-    return this.http.get<any>(this.authUrl + 'login/1');
+    return this.http.get<any>(this.baseUrl + 'login/1');
   }
 }

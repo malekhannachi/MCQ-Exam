@@ -8,13 +8,13 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="d-flex align-items-center">
         <ul class="nav navbar-right d-flex align-items-center">
-          <li  *ngIf="user?.role =='doctor' " routerLinkActive="active"><a routerLink="/new-exam"> New Exam</a></li>
-          <li *ngIf="user?.role =='doctor' " routerLinkActive="active"><a routerLink="/students">Students</a></li>
+          <li  *ngIf="user?.role =='doctor' " routerLinkActive="active"><a routerLink="/new-exam"><i class="fa-solid fa-plus"></i> New Exam</a></li>
+          <li *ngIf="user?.role =='doctor' " routerLinkActive="active"><a routerLink="/students"><i class="fa-solid fa-users"></i> Students</a></li>
           <li *ngIf="user!==null" routerLinkActive="active"><a routerLink="/subjects"> Subjects</a></li>
-          <li  *ngIf="user==null" routerLinkActive="active" ><a routerLink="/login">Login</a></li>
-          <li  *ngIf="user!==null" (click)="logOut()" routerLinkActive="active"><a routerLink="/login">Logout</a></li>
+          <li  *ngIf="user==null" routerLinkActive="active" ><a routerLink="/login"> Login</a></li>
+          <li  *ngIf="user!==null" (click)="logOut()" routerLinkActive="active"><a routerLink="/login"> <i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
           <li  *ngIf="user==null" routerLinkActive="active"><a routerLink="/register">Register</a></li>
-          <li *ngIf="user!==null" class="username">{{user?.username}}</li>
+          <li *ngIf="user!==null" class="username"><i class="fa-regular fa-user"></i> {{user?.username}}</li>
         </ul>
       
       </div><!-- /.navbar-collapse -->

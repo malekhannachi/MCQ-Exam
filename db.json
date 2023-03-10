@@ -21,9 +21,68 @@
       "id": 1
     }
   ],
-  "subjects": [],
+  "subjects": [
+    {
+      "name": "math",
+      "questions": [
+        {
+          "question": "1+9",
+          "answerA": "15",
+          "answerB": "01",
+          "answerC": "12",
+          "answerD": "10",
+          "correctAnswer": "10"
+        }
+      ],
+      "id": 15
+    },
+    {
+      "name": "sasa",
+      "questions": [
+        {
+          "question": "gtgtg",
+          "answerA": "599",
+          "answerB": "5",
+          "answerC": "7",
+          "answerD": "59",
+          "correctAnswer": "59"
+        }
+      ],
+      "id": 16
+    },
+    {
+      "name": "info",
+      "questions": [
+        {
+          "question": "48",
+          "answerA": "48",
+          "answerB": "48",
+          "answerC": "55",
+          "answerD": "45",
+          "correctAnswer": "45"
+        }
+      ],
+      "id": 17
+    },
+    {
+      "name": "88",
+      "questions": [
+        {
+          "question": "848",
+          "answerA": "454",
+          "answerB": "48",
+          "answerC": "48",
+          "answerD": "8",
+          "correctAnswer": "454"
+        }
+      ],
+      "id": 18
+    }
+  ],
   "login": [
     {
+      "username": "malekhannachi",
+      "role": "students",
       "id": 1
     }
   ]
