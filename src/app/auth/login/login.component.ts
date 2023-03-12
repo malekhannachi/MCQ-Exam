@@ -63,6 +63,7 @@ export class LoginComponent implements OnInit {
       const model = {
         username: this.users[index].username,
         role: this.type,
+        idUser: this.users[index].id,
       };
       console.log(index);
       console.log(model);
