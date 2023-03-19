@@ -1,11 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DoctorService {
-  baseUrl = 'http://localhost:3000/';
+  baseUrl = environment.baseApi;
   constructor(private http: HttpClient) {}
 
   createSubject(model: any) {

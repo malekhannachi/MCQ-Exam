@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { User } from 'src/app/models/user';
+
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -29,6 +29,10 @@ export class RegisterComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getUser();
+    let isLoggedIn = this.service.isLoggedIn();
+    if (isLoggedIn) {
+      this.router.navigate(['/subjects']);
+    }
   }
 
   getUser() {
@@ -41,22 +45,34 @@ export class RegisterComponent implements OnInit {
     this.submitted = true;
 
     if (this.registerForm.invalid) {
-      this.toast.error('Form is not avaible ');
+      this.toast.info('Check your fields !');
+      return;
+    }
+
+    if (
+      this.registerForm.value.password !==
+      this.registerForm.value.confirmPassword
+    ) {
+      this.toast.info('Check your Password !');
       return;
     }
     let data = this.registerForm.value;
     console.log(data);
-    let user = new User(data.username, data.email, data.password);
-    console.log(user);
+
+    const model = {
+      username: data.username,
+      email: data.email,
+      password: data.password,
+    };
 
     let index = this.students.findIndex((item) => item.email == data.email);
     if (index !== -1) {
-      this.toast.info('Student is Exist !');
+      this.toast.error('Student is Exist !');
     } else {
-      this.service.createUser(user).subscribe((result) => {
+      this.service.createUser(model).subscribe((result) => {
         console.log(result);
-        this.router.navigate(['/subjects']);
-        this.toast.success('Account is Created ');
+        this.router.navigate(['/login']);
+        this.toast.success('Account created successfully');
       });
     }
   }

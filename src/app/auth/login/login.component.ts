@@ -29,6 +29,11 @@ export class LoginComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getUser();
+
+    let isLoggedIn = this.service.isLoggedIn();
+    if (isLoggedIn) {
+      this.router.navigate(['/subjects']);
+    }
   }
 
   getRole(event: any) {
@@ -48,7 +53,7 @@ export class LoginComponent implements OnInit {
     this.submitted = true;
 
     if (this.loginForm.invalid) {
-      this.toast.error('Form is not avaible ');
+      this.toast.info('Check your fields !');
       return;
     }
 
@@ -58,7 +63,7 @@ export class LoginComponent implements OnInit {
       (item) => item.email == data.email && item.password == data.password
     );
     if (index == -1) {
-      this.toast.info('Email or password is invalid !');
+      this.toast.error('Email or password is invalid !');
     } else {
       const model = {
         username: this.users[index].username,
@@ -71,6 +76,8 @@ export class LoginComponent implements OnInit {
       this.service.loginUser(model).subscribe((result) => {
         this.service.user.next(result);
         console.log(result);
+        let token = result;
+        localStorage.setItem('myToken', JSON.stringify(token));
         this.router.navigate(['/subjects']);
         this.toast.success('Account is Login ');
       });

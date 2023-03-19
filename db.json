@@ -4,36 +4,61 @@
       "username": "malekhannachi",
       "email": "malekanyles@gmail.com",
       "password": "123",
-      "id": 1
+      "id": 1,
+      "subject": [
+        {
+          "name": "info",
+          "degree": 0,
+          "id": "1"
+        },
+        {
+          "name": "science",
+          "degree": 2,
+          "id": "2"
+        }
+      ]
     },
     {
       "username": "malek",
       "email": "malek@gmail.com",
       "password": "55101098",
-      "id": 2,
-      "subject": [
-        {
-          "name": "Technologie",
-          "degree": 0,
-          "id": "16"
-        },
-        {
-          "name": "Technologie",
-          "degree": 0,
-          "id": "16"
-        },
-        {
-          "name": "info",
-          "degree": 0,
-          "id": "17"
-        }
-      ]
+      "id": 2
     },
     {
       "username": "malekhhh",
       "email": "malek12@gmail.com",
       "password": "123",
       "id": 3
+    },
+    {
+      "username": "userma",
+      "email": "malek50@gmail.com",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "username": "malekhannachi",
+      "email": "malekanyles12@gmail.com",
+      "password": "524414",
+      "id": 5
+    },
+    {
+      "username": "hamea",
+      "email": "hamza@mail.com",
+      "password": "123",
+      "id": 6,
+      "subject": [
+        {
+          "name": "info",
+          "degree": 1,
+          "id": "1"
+        },
+        {
+          "name": "science",
+          "degree": 0,
+          "id": "2"
+        }
+      ]
     }
   ],
   "doctor": [
@@ -46,75 +71,44 @@
   ],
   "subjects": [
     {
-      "name": "math",
-      "questions": [
-        {
-          "question": "1+9",
-          "answerA": "15",
-          "answerB": "01",
-          "answerC": "12",
-          "answerD": "10",
-          "correctAnswer": "10"
-        },
-        {
-          "question": "6*6",
-          "answerA": "14",
-          "answerB": "36",
-          "answerC": "44",
-          "answerD": "45",
-          "correctAnswer": "36"
-        }
-      ],
-      "id": 15
-    },
-    {
-      "name": "Technologie",
-      "questions": [
-        {
-          "question": "gtgtg",
-          "answerA": "599",
-          "answerB": "5",
-          "answerC": "7",
-          "answerD": "59",
-          "correctAnswer": "59"
-        }
-      ],
-      "id": 16
-    },
-    {
       "name": "info",
       "questions": [
         {
-          "question": "48",
-          "answerA": "48",
+          "question": "46+1",
+          "answerA": "45",
           "answerB": "48",
-          "answerC": "55",
-          "answerD": "45",
-          "correctAnswer": "45"
+          "answerC": "47",
+          "answerD": "4848",
+          "correctAnswer": "47"
         }
       ],
-      "id": 17
+      "id": 1
     },
     {
-      "name": "Science",
+      "name": "science",
       "questions": [
         {
-          "question": "848",
-          "answerA": "454",
-          "answerB": "48",
-          "answerC": "48",
-          "answerD": "8",
-          "correctAnswer": "454"
+          "question": "45+45",
+          "answerA": "90",
+          "answerB": "02",
+          "answerC": "50",
+          "answerD": "20",
+          "correctAnswer": "90"
+        },
+        {
+          "question": "54+6",
+          "answerA": "50",
+          "answerB": "60",
+          "answerC": "98",
+          "answerD": "61",
+          "correctAnswer": "60"
         }
       ],
-      "id": 18
+      "id": 2
     }
   ],
   "login": [
     {
-      "username": "malekhhh",
-      "role": "students",
-      "idUser": 3,
       "id": 1
     }
   ]

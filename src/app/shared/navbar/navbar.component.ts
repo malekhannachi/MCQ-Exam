@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class NavbarComponent implements OnInit {
   user: any = null;
 
-  constructor(private service: AuthService) {}
+  constructor(private service: AuthService,private router :Router) {}
   ngOnInit(): void {
     this.service.user.subscribe((res: any) => {
       if (res.role) {
@@ -24,6 +25,8 @@ export class NavbarComponent implements OnInit {
     this.service.loginUser(model).subscribe((res) => {
       this.user = null;
       console.log(res);
+      localStorage.removeItem('myToken');
+      this.router.navigate(['/login']);
       this.service.user.next(res);
     });
   }

@@ -50,7 +50,7 @@ export class ExamComponent implements OnInit {
   getUserDate() {
     this.authService.getStudentByID(this.user.idUser).subscribe((res) => {
       this.studentInfo = res;
-      this.studentSubject = res?.subject;
+      this.studentSubject = res?.subject ? res?.subject : [];
       this.checkValidateExam();
     });
   }
@@ -95,7 +95,6 @@ export class ExamComponent implements OnInit {
     for (let x in this.studentSubject) {
       if (this.id == this.studentSubject[x].id) {
         this.validExam = false;
-        this.total = this.studentSubject[x].degree
       }
     }
     console.log(this.validExam);

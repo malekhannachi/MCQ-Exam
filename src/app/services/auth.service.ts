@@ -1,17 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { User } from '../models/user';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  baseUrl = 'http://localhost:3000/';
+  baseUrl = environment.baseApi;
   user = new Subject();
   constructor(private http: HttpClient) {}
 
-  createUser(user: User) {
+  createUser(user: any) {
     return this.http.post<any>(this.baseUrl + 'students', user);
   }
   getAllUser(type: string) {
@@ -32,4 +32,13 @@ export class AuthService {
   updateStudent(id: number, model: any) {
     return this.http.put<any>(this.baseUrl + 'students/' + id, model);
   }
+
+  isLoggedIn() {
+    let token = localStorage.getItem('myToken');
+    if (token) return true;
+    else return false;
+  }
+
+  
+  
 }
